@@ -10,11 +10,15 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://kit.fontawesome.com/ec32a4d107.js" crossorigin="anonymous"></script>
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{Bienvenidos a KidsCode donde aprendes jugando}</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
