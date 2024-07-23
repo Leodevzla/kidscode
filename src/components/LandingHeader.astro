@@ -1,69 +1,146 @@
-<div class="flex sflex-row">
-    <div>
-        <div class="w-[50%] m-24">
-    
+<div class="flex flex-row w-full justify-around pt-12">
+  <div class="w-[50%] my-auto ml-56">
+    <section class="title-1">
+      <h1 class="title">
+        <span>Hola, Estimula</span>
+        <span>la creatividad</span>
+        <span>de tus hijos.</span>
+      </h1>
+      
+      <h2 class="title">
+        <span>En KidsCode</span>
+        <span>aprenden</span>
+        <span>jugando</span>
+      </h2>
+    </section>
     <button>
-        <svg
-          height="24"
-          width="24"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-            fill="currentColor"
-          ></path>
-        </svg>
-        <span>Comenzar</span>
-      </button>
-    </div>
-    <div class="flex w-[50%] m-24">
-        <img class="w-96" src="../../public/img-principal.gif" alt="">
-    </div>
-</div>
+      <svg
+        height="24"
+        width="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+          fill="currentColor"></path>
+      </svg>
+      <span>COMENZAR</span>
+    </button>
+  </div>
+  <div class="w-[50%] items-center">
+    <img class="w-[30rem]" src="../../public/img-principal.gif" alt="" />
+  </div>
 </div>
 <style>
-    * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-		        max-width: 1400px;
-        }
-    .landing {
-    
-    }
-    button {
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 17px;
-  padding: 0.8em 1.3em 0.8em 0.9em;
-  color: white;
-  background: linear-gradient(to right, #013347, #009cda, #3ab7e9);
-  border: none;
-  letter-spacing: 0.05em;
-  border-radius: 16px;
+  @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+  .title-1 {
+  width: 400px;
+  height: 220px;
+  position: relative;
 }
 
-button svg {
-  margin-right: 3px;
-  transform: rotate(30deg);
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+h1, h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Ga Maamli", sans-serif;
+}
+h1 span, h2 span {
+  width: 100%;
+  float: left;
+  color: red;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 3s;
 }
 
-button span {
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+h1 span {
+  animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+}
+h1 span:first-child {
+  animation-delay: 0.7s;
+}
+h1 span:last-child {
+  color: #ffe221;
+  animation-delay: 0.5s;
 }
 
-button:hover svg {
-  transform: translateX(5px) rotate(90deg);
+h2 {
+  top: 0;
+  position: absolute;
 }
-
-button:hover span {
-  transform: translateX(7px);
+h2 span {
+  animation-delay: 4.1s;
+  -webkit-animation-fill-mode: forwards;
 }
+h2 span:first-child {
+  animation-delay: 4.2s;
+}
+h2 span:last-child {
+  color: #ffe221;
+  animation-delay: 4s;
+}
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
+  button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: linear-gradient(to right, #3d8bb3, #009cda, #3ab7e9);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
 
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+
+  button:hover span {
+    transform: translateX(7px);
+  }
 </style>
