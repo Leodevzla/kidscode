@@ -1,18 +1,12 @@
-<div class="flex flex-row w-full justify-around pt-12">
-  <div class="w-[50%] my-auto ml-56">
-    <section class="title-1">
-      <h1 class="title">
-        <span>Hola, Estimula</span>
-        <span>la creatividad</span>
-        <span>de tus hijos.</span>
-      </h1>
-      
-      <h2 class="title">
-        <span>En KidsCode</span>
-        <span>aprenden</span>
-        <span>jugando</span>
-      </h2>
-    </section>
+<div class="landing" id="Home">
+  <div class="w-[50%] my-auto ml-56 text-[#F44336]">
+    KidsCode es 
+    <div class="dropping-texts">
+      <div>Divertido</div>
+      <div>Dinamico</div>
+      <div>Interactivo</div>
+      <div>Educativo!</div>
+    </div>
     <button>
       <svg
         height="24"
@@ -33,83 +27,146 @@
   </div>
 </div>
 <style>
-  @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
-  .title-1 {
-  width: 400px;
-  height: 220px;
-  position: relative;
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+  .landing {
+    margin: 0;
+    text-align: center;
+    padding-top: 43vh;
+    color: #fff;
+    font-family: 'Roboto', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 400;
+    overflow: hidden;
+    background-color: #fff;
+    /* animation:bg 5s linear infinite; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 6.5rem;
+
+  }
+  .dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 3.5rem;
+  vertical-align: -2px;
 }
 
-h1, h2 {
-  font-size: 50px;
-  text-transform: uppercase;
-  font-family: "Ga Maamli", sans-serif;
-}
-h1 span, h2 span {
-  width: 100%;
-  float: left;
-  color: red;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  transform: translateY(-50px);
-  opacity: 0;
-  animation-name: titleAnimation;
-  animation-timing-function: ease;
-  animation-duration: 3s;
+.dropping-texts > div {
+  font-size:0px;
+  opacity:0;
+  margin-left:-30px;
+  position:absolute;
+  font-weight:900;   
+  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
 }
 
-h1 span {
-  animation-delay: 0.6s;
-  -webkit-animation-fill-mode: forwards;
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
 }
-h1 span:first-child {
-  animation-delay: 0.7s;
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
 }
-h1 span:last-child {
-  color: #ffe221;
-  animation-delay: 0.5s;
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
 }
 
-h2 {
-  top: 0;
-  position: absolute;
-}
-h2 span {
-  animation-delay: 4.1s;
-  -webkit-animation-fill-mode: forwards;
-}
-h2 span:first-child {
-  animation-delay: 4.2s;
-}
-h2 span:last-child {
-  color: #ffe221;
-  animation-delay: 4s;
-}
-@keyframes titleAnimation {
+@keyframes roll {
   0% {
-    transform: translateY(-50px);
-    opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
   }
   20% {
-    transform: translateY(0);
-    opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
   }
-  80% {
-    transform: translateY(0);
-    opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
   }
   100% {
-    transform: translateY(50px);
-    opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
-    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
   }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  30% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size:200px;
+    opacity:0;
+    margin-left:-1000px;
+    margin-top:-800px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bg {
+  0% {background: #ff0075;}
+  3% {background: #04db89;}
+  20% {background: #04db89;}
+  23% {background: #b200ff;}
+  40% {background: #b200ff;}
+  43% {background: #8BC34A;}
+  60% {background: #8BC34A;}
+  63% {background: #f436eb;}
+  80% {background: #fa2cf0;}
+  83% {background: #f725ec;}
+  100% {background: #f703ea;}
 }
   button {
     display: flex;
@@ -117,13 +174,15 @@ h2 span:last-child {
     font-family: inherit;
     cursor: pointer;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 20px;
     padding: 0.8em 1.3em 0.8em 0.9em;
     color: white;
-    background: linear-gradient(to right, #3d8bb3, #009cda, #3ab7e9);
+    animation:bg 5s linear infinite;
     border: none;
     letter-spacing: 0.05em;
     border-radius: 16px;
+    margin-left: 3rem;
+    margin-top: 20px;
   }
 
   button svg {

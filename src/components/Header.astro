@@ -3,16 +3,16 @@
 ---
 
 <!-- Menu para escritorio -->
-<header class="header">
-  <img class="w-40 pt-10" src="../../public/logokc.png" alt="">
+<header>
+  <img class="w-48 pt-10" src="../../public/logokc.png" alt="">
     <ul class="menu-bar">
-        <li>Beneficios</li>
-        <li>Cursos</li>
-        <li>Equipo</li>
-        <li>Contacto</li>
+      <li><a href="#">BENEFICIOS</a></li>
+      <li><a href="#">CURSOS</a></li>
+      <li><a href="#">EQUIPO</a></li>
+      <li><a href="#">CONTACTO</a></li>
     </ul>
     <ul class="menu-bar">
-        <li><i class="fa-solid fa-user"></i>Ingresar</li>
+        <li><i class="fa-solid fa-user"></i>INGRESAR</li>
     </ul>
     <!-- Fin para escritorio -->
      <!-- Menu para movil -->
@@ -22,15 +22,20 @@
         <label for="active" class="close"></label>
         <div class="wrapper">
           <ul>
-    <li><a href="#">Beneficios</a></li>
-    <li><a href="#">Cursos</a></li>
-    <li><a href="#">Equipo</a></li>
-    <li><a href="#">Contacto</a></li>
-    <li><a href="#">Ingresar</a></li>
+    <li><a href="#">BENEFICIOS</a></li>
+    <li><a href="#">CURSOS</a></li>
+    <li><a href="#">EQUIPO</a></li>
+    <li><a href="#">CONTACTO</a></li>
+    <li><a href="#">INGRESAR</a></li>
     </ul>
     </div>
 </div>
-    
+  <script>
+    window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("scroll", window.scrollY > 20);
+  })
+    </script>  
       <!-- fin para movil -->
     <style>
         * {
@@ -39,12 +44,20 @@
             box-sizing: border-box;
 		        max-width: 1400px;
         }
-        .header {
+        .bg {
+        background-color: #f8fc05;
+        }
+        header {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             height: 4rem;
-            position: relative;
+            width: 100%;
+            position: fixed;
+            padding-top: 24px;
+        }
+        .scroll {
+          display: none ;
         }
        .img {
             width: 144px;
@@ -55,7 +68,7 @@
   border-radius: 25px;
   height: fit-content;
   display: inline-flex;
-  background-color: rgba(5, 75, 180, 0.8);
+  animation:bg 5s linear infinite;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   align-items: center;
@@ -89,7 +102,7 @@
   color: rgb(0, 0, 0);
 }
 .menu-bar li:hover::before {
-  background: linear-gradient(to bottom, #f8fc05, #f8fc05);
+  background: linear-gradient(to bottom, #f8f8f7, #fffffe);
   box-shadow: 0px 3px 20px 0px black;
   transform: scale(0.9);
 }
