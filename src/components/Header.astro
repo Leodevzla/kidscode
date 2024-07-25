@@ -4,259 +4,716 @@
 
 <!-- Menu para escritorio -->
 <header>
-  <img class="w-48 pt-10" src="logokc.png" alt="">
-    <ul class="menu-bar">
-      <li><a href="#Beneficios">BENEFICIOS</a></li>
-      <li><a href="#Cursos">CURSOS</a></li>
-      <li><a href="#Equipo">EQUIPO</a></li>
-      <li><a href="./Contacto" target="_blank">CONTACTO</a></li>
-    </ul>
-    <ul class="menu-bar">
-        <li><i class="fa-solid fa-user"></i>INGRESAR</li>
-    </ul>
-    <!-- Fin para escritorio -->
-     <!-- Menu para movil -->
-     <div class="navbar-movil">
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><span></span></label>
-        <label for="active" class="close"></label>
-        <div class="wrapper">
-          <ul>
+  <img class="w-64 mt-20" src="logokc.png" alt="Logo KIDSCODE" />
+  <ul class="menu-bar">
     <li><a href="#Beneficios">BENEFICIOS</a></li>
     <li><a href="#Cursos">CURSOS</a></li>
     <li><a href="#Equipo">EQUIPO</a></li>
-    <li><a href="./Contacto" target="_blank">CONTACTO</a></li>
-    <li><a href="#">INGRESAR</a></li>
-    </ul>
+    <button id="btn" class="boton-contacto"><i class="fa-solid fa-phone"></i>CONTACTO</button>
+    <div id="myModal-contacto" class="modal-contacto">
+      <!-- Modal content -->
+      <div class="modal-content-contacto">
+        <div class="bg-contacto">
+          <div class="contacto" id="Contacto">
+            <span class="title">Hola Gracias por Contactarnos!</span>
+            <span class="close-contacto">&times;</span>
+            <form class="form-contacto">
+              <div class="group">
+              <input placeholder="" type="text" required="">
+              <label for="name">Nombre</label>
+              </div>
+          <div class="group">
+              <input placeholder="" type="email" id="email" name="email" required="">
+              <label for="email">Correo</label>
+              </div>
+              <div class="group">
+                <input placeholder="" type="email" id="email" name="email" required="">
+                <label for="email">Telefono</label>
+                </div>
+          <div class="group">
+              <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+              <label for="comment">Comentario</label>
+          </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+  </ul>
+  <ul class="menu-bar">
+    <button id="myBtn" class="ingresar-boton"><i class="fa-solid fa-user"></i>INGRESAR</button>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <form class="form">
+          <div class="flex-column">
+            <label>Estudiante </label>
+            <span class="close">&times;</span>
+          </div>
+          <div class="inputForm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              viewBox="0 0 32 32"
+              height="20"
+              ><g data-name="Layer 3" id="Layer_3"
+                ><path
+                  d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"
+                ></path></g
+              ></svg
+            >
+            <input placeholder="Ingresa tu usuario" class="input" type="text" />
+          </div>
+
+          <div class="flex-column">
+            <label>Contraseña </label>
+          </div>
+          <div class="inputForm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              viewBox="-64 0 512 512"
+              height="20"
+              ><path
+                d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"
+              ></path><path
+                d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"
+              ></path></svg
+            >
+            <input
+              placeholder="Ingresa tu contraseña"
+              class="input"
+              type="password"
+            />
+          </div>
+
+          <div class="flex-row">
+            <div>
+              <input type="radio" />
+              <label>Recordar</label>
+            </div>
+            <span class="span">Olvide mis datos?</span>
+          </div>
+          <button class="button-submit">Ingresar</button>
+        </form>
+        
+      </div>
     </div>
-</div>
+
+    <!-- Fin para escritorio -->
+    <!-- Menu para movil -->
+    <div class="navbar-movil">
+      <input type="checkbox" id="active" />
+      <label for="active" class="menu-btn"><span></span></label>
+      <label for="active" class="close"></label>
+      <div class="wrapper">
+        <ul>
+          <li><a href="#Beneficios">BENEFICIOS</a></li>
+          <li><a href="#Cursos">CURSOS</a></li>
+          <li><a href="#Equipo">EQUIPO</a></li>
+          <li><a href="./Contacto" target="_blank">CONTACTO</a></li>
+          <li><a href="#">INGRESAR</a></li>
+        </ul>
+      </div>
+    </div>
     <!-- fin para movil -->
     <script>
-    window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("scroll", window.scrollY > 20);
-  });
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("scroll", window.scrollY > 20);
+      });
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "flex";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+// modal contacto
+// Get the modal
+var modalc = document.getElementById("myModal-contacto");
+
+// Get the button that opens the modal
+var btn = document.getElementById("btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close-contacto")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modalc.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modalc.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalc.style.display = "none";
+  }
+}
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-		        max-width: 1400px;
-        }
-        .bg {
-        background-color: #f8fc05;
-        }
-        header {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 4rem;
-            width: 100%;
-            position: fixed;
-            padding-top: 24px;
-        }
-        .scroll {
-          display: none ;
-        }
-       .img {
-            width: 144px;
-            margin-top: 20px;
-            margin-left: 64px;
-        }
-        .menu-bar {
-  border-radius: 25px;
-  height: fit-content;
-  display: inline-flex;
-  animation:bg 5s linear infinite;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  align-items: center;
-  padding: 0 10px;
-  margin: 15px 0 0 0;
-}
-.menu-bar li {
-  list-style: none;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 12px 16px;
-  margin: 0 8px;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  text-align: center;
-}
-.menu-bar li::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  transition: 0.2s;
-  border-radius: 25px;
-}
-.menu-bar li:hover {
-  color: rgb(0, 0, 0);
-}
-.menu-bar li:hover::before {
-  background: linear-gradient(to bottom, #f8f8f7, #fffffe);
-  box-shadow: 0px 3px 20px 0px black;
-  transform: scale(0.9);
-}
-i {
-    padding-right: 5px;
-}
-@media only screen and (min-width: 980px) {
-    .navbar-movil {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        position: fixed;
+        padding-top: 36px;
+      }
+      .scroll {
         display: none;
-    }
-}
-@media only screen and (max-width: 979px) {
-    .menu-bar {
-        display: none;
-    }
-    .wrapper{
-  position: fixed;
-  top: 0;
-  right: -100%;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(5, 75, 180, 0.8);
-  transition: all 0.6s ease-in-out;
-}
-#active:checked ~ .wrapper{
-  right:0;
-}
-.menu-btn{
-  position: absolute;
-  z-index: 2;
-  right: 20px;
-  top: 20px;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  font-size: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.menu-btn span,
-.menu-btn:before,
-.menu-btn:after{
-	content: "";
-	position: absolute;
-	top: calc(50% - 1px);
-	left: 30%;
-	width: 40%;
-	border-bottom: 2px solid #000;
-	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.menu-btn:before{
-  transform: translateY(-8px);
-}
-.menu-btn:after{
-  transform: translateY(8px);
-}
+      }
+      .img {
+        width: 160px;
+        margin-top: 20px;
+        margin-left: 64px;
+      }
+      .menu-bar {
+        border-radius: 25px;
+        height: fit-content;
+        display: inline-flex;
+        animation: bg 5s linear infinite;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        align-items: center;
+        padding: 5px 25px;
+        margin: 15px 0 0 0;
+      }
+      .menu-bar li {
+        list-style: none;
+        color: white;
+        font-family: 'Roboto';
+        font-weight: bold;
+        padding: 12px 16px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 20px;
+      }
+      /* Estilos de modal ingresar */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 0; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        margin-right: 2000px;
+      }
 
+      /* Modal Content */
+      .modal-content {
+        width: 100%;
+      }
 
-.close {
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	transition: background .6s;
-}
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
 
-/* cerrando animacion */
-#active:checked + .menu-btn span {
-	transform: scaleX(0);
-}
-#active:checked + .menu-btn:before {
-	transform: rotate(45deg);
-  border-color: #fff;
-}
-#active:checked + .menu-btn:after {
-	transform: rotate(-45deg);
-  border-color: #fff;
-}
-.wrapper ul{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  height: 90%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-}
-.wrapper ul li{
-  height: 10%;
-  margin: 10px 0;
-}
-.wrapper ul li a{
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 500;
-  padding: 5px 30px;
-  color: #f8fc05;
-  border-radius: 50px;
-  position: absolute;
-  line-height: 30px;
-  margin: 5px 20px;
-  opacity: 0;
-  transition: all 0.3s ease;
-  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.wrapper ul li a:after{
-  position: absolute;
-  content: "";
-  background: #fff;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 50px;
-  transform: scaleY(0);
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-.wrapper ul li a:hover:after{
-  transform: scaleY(1);
-}
-.wrapper ul li a:hover{
-  color: #1a73e8;
-}
-input[type="checkbox"]{
-  display: none;
-}
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  text-align: center;
-  width: 100%;
-  color: #202020;
-}
-#active:checked ~ .wrapper ul li a{
-  opacity: 1;
-}
-.wrapper ul li a{
-  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateX(100px);
-}
-#active:checked ~ .wrapper ul li a{
-	transform: none;
-	transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
-   transition-delay: .6s;
-  transform: translateX(-100px);
-}
-
-}
-   
-    </style>
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
     
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #ffffff;
+        padding: 30px;
+        width: 450px;
+        border-radius: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      ::placeholder {
+        font-family:  "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .form button {
+        align-self: flex-end;
+      }
+
+      .flex-column > label {
+        color: #151717;
+        font-weight: 600;
+      }
+
+      .inputForm {
+        border: 1.5px solid #ecedec;
+        border-radius: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        transition: 0.2s ease-in-out;
+      }
+
+      .input {
+        margin-left: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      .input:focus {
+        outline: none;
+      }
+
+      .inputForm:focus-within {
+        border: 1.5px solid #2d79f3;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .flex-row > div > label {
+        font-size: 14px;
+        color: black;
+        font-weight: 400;
+      }
+
+      .span {
+        font-size: 14px;
+        margin-left: 5px;
+        color: #2d79f3;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .button-submit {
+        margin: 20px 0 10px 0;
+        animation: bg 5s linear infinite;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 10px;
+        height: 50px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .p {
+        text-align: center;
+        color: black;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      .btn {
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        gap: 10px;
+        border: 1px solid #ededef;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ingresar-boton {
+        list-style: none;
+        color: white;
+        font-family: 'Roboto';
+        font-weight: bold;
+        padding: 12px 16px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 20px;
+      }
+        /* Fin de modal ingresar */
+/* Estilos modal contacto */
+.modal-contacto {
+  display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 0; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        margin-right: 2000px;
+}
+
+/* Modal Content */
+.modal-content-contacto {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close-contacto {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-contacto:hover,
+.close-contacto:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bg-contacto {
+    /* background-image: url("paisaje.gif");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height: 600px;
+    padding-top: 50px;
+  }
+  .contacto {
+background-color: #fff;
+border-radius: 10px;
+padding: 20px;
+margin: 0 auto;
+width: 400px;
+display: flex;
+flex-direction: column;
+}
+
+.title {
+font-size: 24px;
+font-weight: 600;
+text-align: center;
+}
+
+.form-contacto {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.group {
+position: relative;
+}
+
+.form-contacto .group label {
+font-size: 14px;
+color: rgb(99, 102, 102);
+position: absolute;
+top: -10px;
+left: 10px;
+background-color: #fff;
+transition: all .3s ease;
+}
+
+.form-contacto .group input,
+.form-contacto .group textarea {
+padding: 10px;
+border-radius: 5px;
+border: 1px solid rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+outline: 0;
+width: 100%;
+background-color: transparent;
+}
+
+.form-contacto .group input:placeholder-shown+ label, .form-contacto .group textarea:placeholder-shown +label {
+top: 10px;
+background-color: transparent;
+}
+
+.form-contacto .group input:focus,
+.form-contacto .group textarea:focus {
+border-color: #3366cc;
+}
+
+.form-contacto .group input:focus+ label, .form-contacto .group textarea:focus +label {
+top: -10px;
+left: 10px;
+background-color: #fff;
+color: #3366cc;
+font-weight: 600;
+font-size: 14px;
+}
+
+.form-contacto .group textarea {
+resize: none;
+height: 100px;
+}
+
+.form-contacto button {
+background-color: #3366cc;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.form-contacto button:hover {
+background-color: #27408b;
+}
+/* estilos modal contacto */
+      .boton-contacto {
+        list-style: none;
+        color: white;
+        font-family: 'Roboto';
+        font-weight: bold;
+        padding: 12px 16px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 20px;
+      }
+      .menu-bar li::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.2s;
+        border-radius: 25px;
+      }
+      .menu-bar li:hover {
+        color: rgb(0, 0, 0);
+      }
+      .menu-bar li:hover::before {
+        background: linear-gradient(to bottom, #f8f8f7, #fffffe);
+        box-shadow: 0px 3px 20px 0px black;
+        transform: scale(0.9);
+      }
+      i {
+        padding-right: 5px;
+      }
+      @media only screen and (min-width: 980px) {
+        .navbar-movil {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 979px) {
+        .menu-bar {
+          display: none;
+        }
+        .wrapper {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(5, 75, 180, 0.8);
+          transition: all 0.6s ease-in-out;
+        }
+        #btn {
+          list-style: none;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        padding: 12px 16px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        }
+        #myBtn {
+          list-style: none;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        padding: 12px 16px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        }
+        #active:checked ~ .wrapper {
+          right: 0;
+        }
+        .menu-btn {
+          position: absolute;
+          z-index: 2;
+          right: 20px;
+          top: 20px;
+          height: 50px;
+          width: 100px;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 50%;
+          font-size: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        .menu-btn span,
+        .menu-btn:before,
+        .menu-btn:after {
+          content: "";
+          position: absolute;
+          top: calc(50% - 1px);
+          left: 30%;
+          width: 40%;
+          border-bottom: 2px solid #000;
+          transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .menu-btn:before {
+          transform: translateY(-8px);
+        }
+        .menu-btn:after {
+          transform: translateY(8px);
+        }
+
+        .close {
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          transition: background 0.6s;
+        }
+
+        /* cerrando animacion */
+        #active:checked + .menu-btn span {
+          transform: scaleX(0);
+        }
+        #active:checked + .menu-btn:before {
+          transform: rotate(45deg);
+          border-color: #fff;
+        }
+        #active:checked + .menu-btn:after {
+          transform: rotate(-45deg);
+          border-color: #fff;
+        }
+        .wrapper ul {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          height: 90%;
+          transform: translate(-50%, -50%);
+          list-style: none;
+          text-align: center;
+        }
+        .wrapper ul li {
+          height: 10%;
+          margin: 10px 0;
+        }
+        .wrapper ul li a {
+          text-decoration: none;
+          font-size: 30px;
+          font-weight: 500;
+          padding: 5px 30px;
+          color: #f8fc05;
+          border-radius: 50px;
+          position: absolute;
+          line-height: 30px;
+          margin: 5px 20px;
+          opacity: 0;
+          transition: all 0.3s ease;
+          transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .wrapper ul li a:after {
+          position: absolute;
+          content: "";
+          background: #fff;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          border-radius: 50px;
+          transform: scaleY(0);
+          z-index: -1;
+          transition: transform 0.3s ease;
+        }
+        .wrapper ul li a:hover:after {
+          transform: scaleY(1);
+        }
+        .wrapper ul li a:hover {
+          color: #1a73e8;
+        }
+        input[type="checkbox"] {
+          display: none;
+        }
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          text-align: center;
+          width: 100%;
+          color: #202020;
+        }
+        #active:checked ~ .wrapper ul li a {
+          opacity: 1;
+        }
+        .wrapper ul li a {
+          transition:
+            opacity 1.2s,
+            transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateX(100px);
+        }
+        #active:checked ~ .wrapper ul li a {
+          transform: none;
+          transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1); /* easeOutBackを緩めた感じ */
+          transition-delay: 0.6s;
+          transform: translateX(-100px);
+        }
+      }
+    </style>
+  </ul>
+</header>
