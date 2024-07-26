@@ -1,12 +1,16 @@
 <div class="landing" id="Home">
   <div class="w-[50%] my-auto ml-10 text-[#F44336]">
-    KidsCode es
-    <div class="dropping-texts">
-      <div>Divertido</div>
-      <div>Dinamico</div>
-      <div>Interactivo</div>
-      <div>Educativo!</div>
-    </div>
+    <section class="rotatingText">
+      <div class="rotatingText-content">
+        <p class="rotatingText-description">
+          KidsCode es&hellip;
+        </p>
+    
+        <h2 class="rotatingText-adjective">Divertido</h2>
+        <h2 class="rotatingText-adjective">Interativo</h2>
+        <h2 class="rotatingText-adjective">Educativo!👌</h2>
+      </div>
+    </section>
     <button>
       <svg
         height="24"
@@ -28,6 +32,9 @@
 </div>
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+  :root {
+    --primary-color: #009cda;
+  }
   .landing {
     margin: 0;
     text-align: center;
@@ -43,128 +50,77 @@
     padding-top: 6.5rem;
 
   }
-  .dropping-texts {
-  display: inline-block;
-  width: 240px;
-  text-align: left;
-  height:4rem;
-  vertical-align: -2px;
+.rotatingText {
+	 align-items: center;
+	 display: flex;
+	 height: 20vh;
+	 text-align: center;
 }
-
-.dropping-texts > div {
-  font-size:0px;
-  opacity:0;
-  margin-left:-30px;
-  position:absolute;
-  font-weight:900;   
-  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+ .rotatingText-content {
+	 position: relative;
+	 width: 100%;
 }
-
-.dropping-texts > div:nth-child(1) {
-  animation: roll 5s linear infinite 0s;
+ .rotatingText-description {
+	 font-family: 'Roboto', serif;
+	 font-style: bold;
+	 font-size: 36px;
+	 margin: 0;
 }
-.dropping-texts > div:nth-child(2) {
-  animation: roll 5s linear infinite 1s;
+ @media (min-width: 768px) {
+	 .rotatingText-description {
+		 font-size: 30px;
+	}
 }
-.dropping-texts > div:nth-child(3) {
-  animation: roll 5s linear infinite 2s;
+ .rotatingText-adjective {
+	 font-family: 'Roboto', sans-serif;
+	 font-size: 40px;
+	 left: 0;
+	 margin-bottom: 0;
+	 margin-top: 30px;
+	 opacity: 0;
+	 position: absolute;
+	 right: 0;
+	 text-align: center;
+	 text-transform: uppercase;
+	 top: 0;
 }
-.dropping-texts > div:nth-child(4) {
-  animation: roll2 5s linear infinite 3s;
+ @media (min-width: 768px) {
+	 .rotatingText-adjective {
+		 font-size: 70px;
+	}
 }
-
-@keyframes roll {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  20% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  27% {
-    font-size:0px;
-    opacity:0.5;
-    margin-left:20px;
-    margin-top:100px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
+ .rotatingText-adjective:nth-of-type(1) {
+	 animation: rotate-text-up 1.5s 0.75s;
 }
-
-@keyframes roll2 {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  30% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  37% {
-    font-size:200px;
-    opacity:0;
-    margin-left:-1000px;
-    margin-top:-800px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
+ .rotatingText-adjective:nth-of-type(2) {
+	 animation: rotate-text-up 1.5s 2s;
 }
-
-@keyframes bg {
-  0% {background: #ff0075;}
-  3% {background: #04db89;}
-  20% {background: #04db89;}
-  23% {background: #b200ff;}
-  40% {background: #b200ff;}
-  43% {background: #8BC34A;}
-  60% {background: #8BC34A;}
-  63% {background: #f436eb;}
-  80% {background: #fa2cf0;}
-  83% {background: #f725ec;}
-  100% {background: #f703ea;}
+ .rotatingText-adjective:nth-of-type(3) {
+	 animation: fade-text-in 1.5s 3.25s forwards;
+}
+ @keyframes rotate-text-up {
+	 0% {
+		 transform: translate3d(0, 80px, 0);
+		 opacity: 0;
+	}
+	 20%, 80% {
+		 transform: translate3d(0, 0, 0);
+		 opacity: 1;
+	}
+	 100% {
+		 transform: translate3d(0, -40px, 0);
+		 opacity: 0;
+	}
+}
+ @keyframes fade-text-in {
+	 0% {
+		 opacity: 0;
+		 transform: translate3d(0, 80px, 0);
+	}
+	 50%, 100% {
+		 opacity: 1;
+		 transform: translate3d(0, 0, 0);
+	}
 }
   button {
     display: flex;
@@ -175,7 +131,7 @@
     font-size: 20px;
     padding: 1em 1.6em 1em 1.3em;
     color: white;
-    animation:bg 5s linear infinite;
+    background: #009cda;
     border: none;
     letter-spacing: 0.1em;
     border-radius: 16px;
