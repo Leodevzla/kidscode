@@ -15,8 +15,10 @@
       <div class="modal-content-contacto">
         <div class="bg-contacto">
           <div class="contacto" id="Contacto">
+            <div class="flex justify-between">
             <span class="title">Hola Gracias por Contactarnos!</span>
             <span class="close-contacto">&times;</span>
+          </div>
             <form class="form-contacto">
               <div class="group">
               <input placeholder="" type="text" required="">
@@ -190,6 +192,7 @@ window.onclick = function(event) {
         width: 100%;
         position: fixed;
         padding-top: 36px;
+        margin: 0 -2rem;
       }
       .scroll {
         display: none;
@@ -388,14 +391,14 @@ window.onclick = function(event) {
         top: 0;
         width: 100%; /* Full width */
         height: 100%; /* Full height */
-        margin-right: 2000px;
+        
 }
 
 /* Modal Content */
 .modal-content-contacto {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 80%;
 }
@@ -415,16 +418,12 @@ window.onclick = function(event) {
   cursor: pointer;
 }
 .bg-contacto {
-    /* background-image: url("paisaje.gif");
-    background-repeat: no-repeat;
-    background-size: cover; */
     height: 600px;
     padding-top: 50px;
   }
   .contacto {
 background-color: #fff;
 border-radius: 10px;
-padding: 20px;
 margin: 0 auto;
 width: 400px;
 display: flex;
@@ -572,6 +571,11 @@ background-color: #27408b;
         white-space: nowrap;
         text-align: center;
         }
+        .menu-bar #btn:hover::before {
+        background: linear-gradient(to bottom, #ffe605, #ffe605);
+        box-shadow: 0px 3px 20px 0px black;
+        transform: scale(0.9);
+      }
         #myBtn {
           list-style: none;
         color: white;
@@ -584,6 +588,11 @@ background-color: #27408b;
         white-space: nowrap;
         text-align: center;
         }
+        .menu-bar button:hover::before {
+        background: linear-gradient(to bottom, #ffe605, #ffe605);
+        box-shadow: 0px 3px 20px 0px black;
+        transform: scale(0.9);
+      }
         #active:checked ~ .wrapper {
           right: 0;
         }
