@@ -1,14 +1,15 @@
 <div class="landing" id="Home">
-  <div class="w-[50%] my-auto ml-10 text-[#F44336]">
+  <div class="w-[50%] my-auto ml-10 text-[#9175f9]">
     <section class="rotatingText">
       <div class="rotatingText-content">
         <p class="rotatingText-description">
           KidsCode es&hellip;
         </p>
-    
+        <div class="mov-text">
         <h2 class="rotatingText-adjective">Divertido</h2>
         <h2 class="rotatingText-adjective">Interativo</h2>
         <h2 class="rotatingText-adjective">Educativo!👌</h2>
+       </div>
       </div>
     </section>
     <button>
@@ -21,7 +22,7 @@
         <path d="M0 0h24v24H0z" fill="none"></path>
         <path
           d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-          fill="currentColor"></path>
+          fill="#fff"></path>
       </svg>
       <span>COMENZAR</span>
     </button>
@@ -30,11 +31,18 @@
     <img class="w-[45rem]" src="img-principal.gif" alt="" />
   </div>
 </div>
+  <div class="img-prin">
+    <img src="img-movil.gif" alt="" width="800px"/>
+  </div>
+</div>
+
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
-  :root {
-    --primary-color: #009cda;
-  }
+
+  @media only screen and (min-width: 1200px) {
+    .title {
+      display: none;
+    }
   .landing {
     margin: 0;
     text-align: center;
@@ -51,7 +59,6 @@
 
   }
 .rotatingText {
-	 align-items: center;
 	 display: flex;
 	 height: 20vh;
 	 text-align: center;
@@ -68,7 +75,7 @@
 }
  @media (min-width: 768px) {
 	 .rotatingText-description {
-		 font-size: 30px;
+		 font-size: 40px;
 	}
 }
  .rotatingText-adjective {
@@ -76,13 +83,14 @@
 	 font-size: 40px;
 	 left: 0;
 	 margin-bottom: 0;
-	 margin-top: 30px;
+	 margin-top: 50px;
 	 opacity: 0;
 	 position: absolute;
 	 right: 0;
 	 text-align: center;
 	 text-transform: uppercase;
 	 top: 0;
+   
 }
  @media (min-width: 768px) {
 	 .rotatingText-adjective {
@@ -96,7 +104,7 @@
 	 animation: rotate-text-up 1.5s 2s;
 }
  .rotatingText-adjective:nth-of-type(3) {
-	 animation: fade-text-in 1.5s 3.25s forwards;
+	 animation: rotate-text-up 1.5s 3.25s;
 }
  @keyframes rotate-text-up {
 	 0% {
@@ -131,7 +139,7 @@
     font-size: 20px;
     padding: 1em 1.6em 1em 1.3em;
     color: white;
-    background: #009cda;
+    background: #9175f9;
     border: none;
     letter-spacing: 0.1em;
     border-radius: 16px;
@@ -156,4 +164,16 @@
   button:hover span {
     transform: translateX(7px);
   }
+  button:hover {
+    background-color: #04db89;
+    color: #fff;
+  }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+   .landing {
+   display: none;
+   }
+
+   }
+  
 </style>

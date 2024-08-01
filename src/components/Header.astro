@@ -4,47 +4,68 @@
 
 <!-- Menu para escritorio -->
 <header>
-  <img class="w-64 mt-20" src="logokc.png" alt="Logo KIDSCODE" />
+  <img src="logo.png" href="#Home" alt="Logo KIDSCODE" />
   <ul class="menu-bar">
     <li><a href="#Beneficios">BENEFICIOS</a></li>
     <li><a href="#Cursos">CURSOS</a></li>
     <li><a href="#Equipo">EQUIPO</a></li>
-    <button id="btn" class="boton-contacto"><i class="fa-solid fa-phone"></i>CONTACTO</button>
+    <li id="btn" class="boton-contacto">
+      <i class="fa-solid fa-phone"></i>CONTACTO
+    </li>
     <div id="myModal-contacto" class="modal-contacto">
       <!-- Modal content -->
       <div class="modal-content-contacto">
         <div class="bg-contacto">
           <div class="contacto" id="Contacto">
             <div class="flex justify-between">
-            <span class="title">Hola Gracias por Contactarnos!</span>
-            <span class="close-contacto">&times;</span>
-          </div>
+              <span class="title">Hola Gracias por Contactarnos!</span>
+              <span class="close-contacto">&times;</span>
+            </div>
             <form class="form-contacto">
               <div class="group">
-              <input placeholder="" type="text" required="">
-              <label for="name">Nombre</label>
-              </div>
-          <div class="group">
-              <input placeholder="" type="email" id="email" name="email" required="">
-              <label for="email">Correo</label>
+                <input placeholder="" type="text" required="" />
+                <label for="name">Nombre</label>
               </div>
               <div class="group">
-                <input placeholder="" type="email" id="email" name="email" required="">
+                <input
+                  placeholder=""
+                  type="email"
+                  id="email"
+                  name="email"
+                  required=""
+                />
+                <label for="email">Correo</label>
+              </div>
+              <div class="group">
+                <input
+                  placeholder=""
+                  type="email"
+                  id="email"
+                  name="email"
+                  required=""
+                />
                 <label for="email">Telefono</label>
-                </div>
-          <div class="group">
-              <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
-              <label for="comment">Comentario</label>
-          </div>
+              </div>
+              <div class="group">
+                <textarea
+                  placeholder=""
+                  id="comment"
+                  name="comment"
+                  rows="5"
+                  required=""></textarea>
+                <label for="comment">Comentario</label>
+              </div>
               <button type="submit">Enviar</button>
             </form>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   </ul>
   <ul class="menu-bar">
-    <button id="myBtn" class="ingresar-boton"><i class="fa-solid fa-user"></i>INGRESAR</button>
+    <li id="myBtn" class="ingresar-boton">
+      <i class="fa-solid fa-user"></i>INGRESAR
+    </li>
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
@@ -99,90 +120,87 @@
           </div>
           <button class="button-submit">Ingresar</button>
         </form>
-        
       </div>
     </div>
+  </ul>
+  <!-- Fin para escritorio -->
+  <!-- Menu para movil -->
+  <input type="checkbox" id="active" />
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <div class="wrapper">
+    <ul>
+      <li><a href="#">BENEFICIOS</a></li>
+      <li><a href="#">CURSOS</a></li>
+      <li><a href="#">EQUIPO</a></li>
+      <li><a href="#">CONTACTO</a></li>
+      <li><a href="#">INGRESAR</a></li>
+    </ul>
+  </div>
+  <!-- fin para movil -->
+  <script>
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle("scroll", window.scrollY > 20);
+    });
 
-    <!-- Fin para escritorio -->
-    <!-- Menu para movil -->
-    <div class="navbar-movil">
-      <input type="checkbox" id="active" />
-      <label for="active" class="menu-btn"><span></span></label>
-      <label for="active" class="close"></label>
-      <div class="wrapper">
-        <ul>
-          <li><a href="#Beneficios">BENEFICIOS</a></li>
-          <li><a href="#Cursos">CURSOS</a></li>
-          <li><a href="#Equipo">EQUIPO</a></li>
-          <li><a href="./Contacto" target="_blank">CONTACTO</a></li>
-          <li><a href="#">INGRESAR</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- fin para movil -->
-    <script>
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("scroll", window.scrollY > 20);
-      });
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-      // Get the modal
-      var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "flex";
+    };
 
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "flex";
-      };
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
 
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
         modal.style.display = "none";
-      };
+      }
+    };
+    // modal contacto
+    // Get the modal
+    var modalc = document.getElementById("myModal-contacto");
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-// modal contacto
-// Get the modal
-var modalc = document.getElementById("myModal-contacto");
+    // Get the button that opens the modal
+    var btn = document.getElementById("btn");
 
-// Get the button that opens the modal
-var btn = document.getElementById("btn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close-contacto")[0];
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close-contacto")[0];
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modalc.style.display = "block";
+    };
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modalc.style.display = "block";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modalc.style.display = "none";
+    };
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modalc.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modalc.style.display = "none";
-  }
-}
-    </script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modalc.style.display = "none";
+      }
+    };
+  </script>
+  <style>
+    @media (min-width: 1200px) {
+      img {
+        margin-top: 6rem;
+        width: 16rem;
       }
       header {
         display: flex;
@@ -202,11 +220,17 @@ window.onclick = function(event) {
         margin-top: 20px;
         margin-left: 64px;
       }
+      .wrapper {
+        display: none;
+      }
+      input {
+        display: none;
+      }
       .menu-bar {
         border-radius: 25px;
         height: fit-content;
         display: inline-flex;
-        background: #009cda;
+        background: #9175f9;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         align-items: center;
@@ -216,7 +240,7 @@ window.onclick = function(event) {
       .menu-bar li {
         list-style: none;
         color: white;
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-weight: bold;
         padding: 12px 16px;
         margin: 0 8px;
@@ -258,7 +282,7 @@ window.onclick = function(event) {
         text-decoration: none;
         cursor: pointer;
       }
-    
+
       .form {
         display: flex;
         flex-direction: column;
@@ -272,7 +296,7 @@ window.onclick = function(event) {
       }
 
       ::placeholder {
-        font-family:  "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+        font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
       }
 
       .form button {
@@ -334,7 +358,7 @@ window.onclick = function(event) {
 
       .button-submit {
         margin: 20px 0 10px 0;
-        animation: bg 5s linear infinite;
+        background: #9175f9;
         border: none;
         color: white;
         font-size: 15px;
@@ -343,6 +367,10 @@ window.onclick = function(event) {
         height: 50px;
         width: 100%;
         cursor: pointer;
+      }
+      .button-submit:hover {
+        background-color: #04db89;
+        color: #fff;
       }
 
       .p {
@@ -370,7 +398,7 @@ window.onclick = function(event) {
       .ingresar-boton {
         list-style: none;
         color: white;
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-weight: bold;
         padding: 12px 16px;
         margin: 0 8px;
@@ -380,10 +408,10 @@ window.onclick = function(event) {
         text-align: center;
         font-size: 20px;
       }
-        /* Fin de modal ingresar */
-/* Estilos modal contacto */
-.modal-contacto {
-  display: none; /* Hidden by default */
+      /* Fin de modal ingresar */
+      /* Estilos modal contacto */
+      .modal-contacto {
+        display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
         padding-top: 0; /* Location of the box */
@@ -391,125 +419,111 @@ window.onclick = function(event) {
         top: 0;
         width: 100%; /* Full width */
         height: 100%; /* Full height */
-        
-}
-
-/* Modal Content */
-.modal-content-contacto {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close-contacto {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-contacto:hover,
-.close-contacto:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-.bg-contacto {
-    height: 600px;
-    padding-top: 50px;
-  }
-  .contacto {
-background-color: #fff;
-border-radius: 10px;
-margin: 0 auto;
-width: 400px;
-display: flex;
-flex-direction: column;
-}
-
-.title {
-font-size: 24px;
-font-weight: 600;
-text-align: center;
-}
-
-.form-contacto {
-margin-top: 20px;
-display: flex;
-flex-direction: column;
-}
-
-.group {
-position: relative;
-}
-
-.form-contacto .group label {
-font-size: 14px;
-color: rgb(99, 102, 102);
-position: absolute;
-top: -10px;
-left: 10px;
-background-color: #fff;
-transition: all .3s ease;
-}
-
-.form-contacto .group input,
-.form-contacto .group textarea {
-padding: 10px;
-border-radius: 5px;
-border: 1px solid rgba(0, 0, 0, 0.2);
-margin-bottom: 20px;
-outline: 0;
-width: 100%;
-background-color: transparent;
-}
-
-.form-contacto .group input:placeholder-shown+ label, .form-contacto .group textarea:placeholder-shown +label {
-top: 10px;
-background-color: transparent;
-}
-
-.form-contacto .group input:focus,
-.form-contacto .group textarea:focus {
-border-color: #3366cc;
-}
-
-.form-contacto .group input:focus+ label, .form-contacto .group textarea:focus +label {
-top: -10px;
-left: 10px;
-background-color: #fff;
-color: #3366cc;
-font-weight: 600;
-font-size: 14px;
-}
-
-.form-contacto .group textarea {
-resize: none;
-height: 100px;
-}
-
-.form-contacto button {
-background-color: #3366cc;
-color: #fff;
-border: none;
-border-radius: 5px;
-padding: 10px;
-font-size: 16px;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.form-contacto button:hover {
-background-color: #27408b;
-}
-/* estilos modal contacto */
+      }
+      .modal-content-contacto {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      .close-contacto {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close-contacto:hover,
+      .close-contacto:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .bg-contacto {
+        height: 600px;
+        padding-top: 50px;
+      }
+      .contacto {
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .form-contacto {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .group {
+        position: relative;
+      }
+      .form-contacto .group label {
+        font-size: 14px;
+        color: rgb(99, 102, 102);
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+      .form-contacto .group input,
+      .form-contacto .group textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        outline: 0;
+        width: 100%;
+        background-color: transparent;
+      }
+      .form-contacto .group input:placeholder-shown + label,
+      .form-contacto .group textarea:placeholder-shown + label {
+        top: 10px;
+        background-color: transparent;
+      }
+      .form-contacto .group input:focus,
+      .form-contacto .group textarea:focus {
+        border-color: #3366cc;
+      }
+      .form-contacto .group input:focus + label,
+      .form-contacto .group textarea:focus + label {
+        top: -10px;
+        left: 10px;
+        background-color: #fff;
+        color: #3366cc;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .form-contacto .group textarea {
+        resize: none;
+        height: 100px;
+      }
+      .form-contacto button {
+        background-color: #9175f9;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .form-contacto button:hover {
+        background-color: #04db89;
+        color: #fff;
+      }
+      /* estilos modal contacto */
       .boton-contacto {
         list-style: none;
         color: white;
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-weight: bold;
         padding: 12px 16px;
         margin: 0 8px;
@@ -541,188 +555,179 @@ background-color: #27408b;
       i {
         padding-right: 5px;
       }
-      @media only screen and (min-width: 980px) {
-        .navbar-movil {
-          display: none;
-        }
+      .mobile-wrapper {
+        display: none;
       }
-      @media only screen and (max-width: 979px) {
-        .menu-bar {
-          display: none;
-        }
-        .wrapper {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          height: 100%;
-          width: 100%;
-          background-color: rgba(5, 75, 180, 0.8);
-          transition: all 0.6s ease-in-out;
-        }
-        #btn {
-          list-style: none;
-        color: white;
-        font-family: sans-serif;
-        font-weight: bold;
-        padding: 12px 16px;
-        margin: 0 8px;
-        position: relative;
-        cursor: pointer;
-        white-space: nowrap;
+    
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      .menu-bar {
+        display: none;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+        margin-left: 1rem;
+      }
+      img {
+        width: 10rem;
+      }
+      .wrapper {
+        position: fixed;
+        top: 0;
+        /*left: -100%;*/
+        right: -100%;
+        height: 100%;
+        width: 100%;
+       /* background: linear-gradient(30deg, #9175f9, #f2f75d);*/
+        /* background: linear-gradient(375deg, #9175f9, #f2f75d);*/ 
+         background: linear-gradient(-45deg, #9175f9 0%, #9802fc 100%);
+        transition: all 0.6s ease-in-out;
+      }
+      #active:checked ~ .wrapper {
+        /*left: 0;*/
+        right: 0;
+      }
+      .menu-btn {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        /*left: 20px; */
+        top: 20px;
+        height: 50px;
+        width: 50px;
         text-align: center;
-        }
-        .menu-bar #btn:hover::before {
-        background: linear-gradient(to bottom, #ffe605, #ffe605);
-        box-shadow: 0px 3px 20px 0px black;
-        transform: scale(0.9);
-      }
-        #myBtn {
-          list-style: none;
-        color: white;
-        font-family: sans-serif;
-        font-weight: bold;
-        padding: 12px 16px;
-        margin: 0 8px;
-        position: relative;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
         cursor: pointer;
-        white-space: nowrap;
+        /*color: #fff;*/
+        transition: all 0.3s ease-in-out;
+      }
+      .menu-btn span,
+      .menu-btn:before,
+      .menu-btn:after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 30%;
+        width: 40%;
+        border-bottom: 2px solid #000;
+        transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      .menu-btn:before {
+        transform: translateY(-8px);
+      }
+      .menu-btn:after {
+        transform: translateY(8px);
+      }
+
+      .close {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: background 0.6s;
+      }
+
+      /* closing animation */
+      #active:checked + .menu-btn span {
+        transform: scaleX(0);
+      }
+      #active:checked + .menu-btn:before {
+        transform: rotate(45deg);
+        border-color: #fff;
+      }
+      #active:checked + .menu-btn:after {
+        transform: rotate(-45deg);
+        border-color: #fff;
+      }
+      .wrapper ul {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        list-style: none;
         text-align: center;
-        }
-        .menu-bar button:hover::before {
-        background: linear-gradient(to bottom, #ffe605, #ffe605);
-        box-shadow: 0px 3px 20px 0px black;
-        transform: scale(0.9);
       }
-        #active:checked ~ .wrapper {
-          right: 0;
-        }
-        .menu-btn {
-          position: absolute;
-          z-index: 2;
-          right: 20px;
-          top: 20px;
-          height: 50px;
-          width: 100px;
-          text-align: center;
-          line-height: 50px;
-          border-radius: 50%;
-          font-size: 10px;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-        }
-        .menu-btn span,
-        .menu-btn:before,
-        .menu-btn:after {
-          content: "";
-          position: absolute;
-          top: calc(50% - 1px);
-          left: 30%;
-          width: 40%;
-          border-bottom: 2px solid #000;
-          transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        .menu-btn:before {
-          transform: translateY(-8px);
-        }
-        .menu-btn:after {
-          transform: translateY(8px);
-        }
-
-        .close {
-          z-index: 1;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          transition: background 0.6s;
-        }
-
-        /* cerrando animacion */
-        #active:checked + .menu-btn span {
-          transform: scaleX(0);
-        }
-        #active:checked + .menu-btn:before {
-          transform: rotate(45deg);
-          border-color: #fff;
-        }
-        #active:checked + .menu-btn:after {
-          transform: rotate(-45deg);
-          border-color: #fff;
-        }
-        .wrapper ul {
-          position: absolute;
-          top: 60%;
-          left: 50%;
-          height: 90%;
-          transform: translate(-50%, -50%);
-          list-style: none;
-          text-align: center;
-        }
-        .wrapper ul li {
-          height: 10%;
-          margin: 10px 0;
-        }
-        .wrapper ul li a {
-          text-decoration: none;
-          font-size: 30px;
-          font-weight: 500;
-          padding: 5px 30px;
-          color: #f8fc05;
-          border-radius: 50px;
-          position: absolute;
-          line-height: 30px;
-          margin: 5px 20px;
-          opacity: 0;
-          transition: all 0.3s ease;
-          transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        .wrapper ul li a:after {
-          position: absolute;
-          content: "";
-          background: #fff;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          border-radius: 50px;
-          transform: scaleY(0);
-          z-index: -1;
-          transition: transform 0.3s ease;
-        }
-        .wrapper ul li a:hover:after {
-          transform: scaleY(1);
-        }
-        .wrapper ul li a:hover {
-          color: #1a73e8;
-        }
-        input[type="checkbox"] {
-          display: none;
-        }
-        .content {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: -1;
-          text-align: center;
-          width: 100%;
-          color: #202020;
-        }
-        #active:checked ~ .wrapper ul li a {
-          opacity: 1;
-        }
-        .wrapper ul li a {
-          transition:
-            opacity 1.2s,
-            transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-          transform: translateX(100px);
-        }
-        #active:checked ~ .wrapper ul li a {
-          transform: none;
-          transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1); /* easeOutBackを緩めた感じ */
-          transition-delay: 0.6s;
-          transform: translateX(-100px);
-        }
+      .wrapper ul li {
+        height: 10%;
+        margin: 15px 0;
       }
-    </style>
-  </ul>
+      .wrapper ul li a {
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 5px 30px;
+        color: #fff;
+        border-radius: 50px;
+        position: absolute;
+        line-height: 50px;
+        margin: 5px 20px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      .wrapper ul li a:after {
+        position: absolute;
+        content: "";
+        background: #fff;
+        /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+        /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 50px;
+        transform: scaleY(0);
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+      .wrapper ul li a:hover:after {
+        transform: scaleY(1);
+      }
+      .wrapper ul li a:hover {
+        color: #f2f75d;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        text-align: center;
+        width: 100%;
+        color: #202020;
+      }
+      .content .title {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .content p {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      #active:checked ~ .wrapper ul li a {
+        opacity: 1;
+      }
+      .wrapper ul li a {
+        transition:
+          opacity 1.2s,
+          transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateX(100px);
+      }
+      #active:checked ~ .wrapper ul li a {
+        transform: none;
+        transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1); /* easeOutBackを緩めた感じ */
+        transition-delay: 0.6s;
+        transform: translateX(-100px);
+      }
+    }
+  </style>
 </header>
