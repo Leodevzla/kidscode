@@ -1,5 +1,5 @@
   <div class="beneficios">
-  <div id="group">
+  <div id="group" class="mb-14">
     <div id="tarjetas">
       <div id="img" alt="card1">
         <img src="card1.jpeg" alt="" />
@@ -56,7 +56,7 @@
       </div>
     </div>
   </div>
-  <div id="group">
+  <div id="group" class="pb-14">
     <div id="tarjetas">
       <div id="img" alt="card5">
         <img src="card5.jpeg" alt="" />
@@ -113,6 +113,7 @@
   </div>
 </div>
 <div class="beneficios-movil">
+  <h1 id="title">Beneficios de KidsCode</h1>
 <div class="card-movil">
   <img src="card1.jpeg" alt="" />
   <p class="number-h1">Futuro</p>
@@ -171,10 +172,11 @@
     .beneficios-movil {
       display: none;
     }
+    .beneficios {
+      background: #000;
+    }
   #group {
   display: flex; 
-margin-top: 3.5rem;
-margin-bottom: 3.5rem; 
 margin-left: 5rem;
 margin-right: 5rem; 
 justify-content: space-between; 
@@ -192,7 +194,7 @@ border-radius: 0.5rem;
 width: 24rem; 
 height: 14rem; 
 transition-duration: 500ms; 
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 253, 253, 0.05); 
 background: #9175f9;
 }
  #img {
@@ -207,7 +209,7 @@ box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06
  }
  h2 {
   margin-bottom: 0.5rem; 
-font-size: 1.5rem;
+font-size: 1.2rem;
 line-height: 2rem; 
 font-weight: 700; 
 color: #ffffff;
@@ -222,6 +224,14 @@ color: #E5E7EB;
  }
  }
  @media (min-width: 320px) and (max-width: 480px) {
+  #title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 25px;
+  }
   .beneficios {
     display: none;
   }
@@ -245,6 +255,7 @@ color: #E5E7EB;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   margin: 10px auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .card-movil:hover {

@@ -1,4 +1,5 @@
 <div class="cursos" id="Cursos">
+  <h1 id="title">Cursos disponibles</h1>
 <div class="modal">
 	<article class="modal-container">
 		<header class="modal-container-header">
@@ -137,9 +138,8 @@
   @media (min-width: 1200px) {
     .cursos {
         display: flex;
-        margin: 4.5rem 5rem;
-        background-color: #9175f9;
-        border-radius: 16px;
+        background-color: #010005;
+        justify-content: center;
     }
     .button,
 .input,
@@ -323,6 +323,13 @@ a {
 }
   }
   @media (min-width: 320px) and (max-width: 600px) {
+    #title {
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+  }
     .cursos {
         display: flex;
         margin: 0;
