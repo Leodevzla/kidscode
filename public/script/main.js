@@ -1,19 +1,15 @@
-const swiftUpElements = document.querySelectorAll('.swift-up-text');
+const items = document.querySelectorAll('.accordion button');
 
-swiftUpElements.forEach(elem => {
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
 
-	const words = elem.textContent.split(' ');
-	elem.innerHTML = '';
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
 
-	words.forEach((el, index) => {
-		words[index] = `<span><i>${words[index]}</i></span>`;
-	});
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
 
-	elem.innerHTML = words.join(' ');
-
-	const children = document.querySelectorAll('span > i');
-	children.forEach((node, index) => {
-		node.style.animationDelay = `${index * .2}s`;
-	});
-
-});
+items.forEach((item) => item.addEventListener('click', toggleAccordion));
