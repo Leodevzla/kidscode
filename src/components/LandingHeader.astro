@@ -41,7 +41,7 @@
  
   <div class="text-landing">
     <div>
-    <span class="type">Formando mini programadores<br></span>
+    <span class="type">Formando mini programadores</span><br>
     <span class="type">Aprende a crear paginas web</span><br />
     <span class="type">Diseña juegos y aplicaciones</span>
   </div>
@@ -186,6 +186,10 @@
     }
   }
   @media (min-width: 320px) and (max-width: 480px) {
+    :root {
+  --primary-color: #c8dc71;
+  --gradient-color: linear-gradient(180deg, #d2ff00 0%, #00d2ff 100%);
+}
     .landing {
       display: none;
     }
@@ -196,14 +200,13 @@
      align-items: center;
     }
     .text-landing {
-      font-family: "Shadows Into Light", cursive;
+      font-family: "Roboto";
      letter-spacing: 2;
       color: #fff;
       font-size: 30px;
       font-weight: 700;
-      width: 80%;
-      text-align: center;
-      display: flex-end;
+      width: 100%;
+      display: flex;
     justify-content: center;
    align-items: center;
   height: 30vh;
