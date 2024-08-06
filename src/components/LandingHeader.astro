@@ -2,14 +2,12 @@
   <div class="w-[50%] my-auto ml-10 text-[#9175f9]">
     <section class="rotatingText">
       <div class="rotatingText-content">
-        <p class="rotatingText-description">
-          KidsCode es&hellip;
-        </p>
+        <p class="rotatingText-description">KidsCode es&hellip;</p>
         <div class="mov-text">
-        <h2 class="rotatingText-adjective">Divertido</h2>
-        <h2 class="rotatingText-adjective">Interativo</h2>
-        <h2 class="rotatingText-adjective">Educativo!👌</h2>
-       </div>
+          <h2 class="rotatingText-adjective">Divertido</h2>
+          <h2 class="rotatingText-adjective">Interativo</h2>
+          <h2 class="rotatingText-adjective">Educativo!👌</h2>
+        </div>
       </div>
     </section>
     <button>
@@ -32,170 +30,209 @@
   </div>
 </div>
 <div class="landing-movil">
-<div class="text-landing">
-  <span class="text">Creando mini programadores</span>
-  <span class="text">Diseño Web</span><br>
-  <span class="text">Creando juegos</span>
-</div>
   <div class="img-prin">
-    <img src="prin.png"  class="img-principal" alt="imagen principal" width="800px"/>
+    <img
+      src="prin.png"
+      class="img-principal"
+      alt="imagen principal"
+      width="800px"
+    />
+  </div>
+ 
+  <div class="text-landing">
+    <div>
+    <span class="type">Formando mini programadores<br></span>
+    <span class="type">Aprende a crear paginas web</span><br />
+    <span class="type">Diseña juegos y aplicaciones</span>
+  </div>
   </div>
 </div>
-</div>
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Shadows+Into+Light&display=swap');
+  @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");
+  
   @media only screen and (min-width: 1200px) {
     .title {
       display: none;
     }
     .img-prin {
-     display: none;
+      display: none;
     }
-  .landing {
-    margin: 0;
-    text-align: center;
-    color: #fff;
-    font-family: 'Roboto', Courier, monospace;
-    font-size: 4rem;
-    font-weight: 400;
-    overflow: hidden;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-top: 6.5rem;
+    .landing {
+      margin: 0;
+      text-align: center;
+      color: #fff;
+      font-family: "Roboto", Courier, monospace;
+      font-size: 4rem;
+      font-weight: 400;
+      overflow: hidden;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-top: 6.5rem;
+    }
+    .rotatingText {
+      display: flex;
+      height: 20vh;
+      text-align: center;
+    }
+    .rotatingText-content {
+      position: relative;
+      width: 100%;
+    }
+    .rotatingText-description {
+      font-family: "Roboto", serif;
+      font-style: bold;
+      font-size: 36px;
+      margin: 0;
+    }
+    @media (min-width: 768px) {
+      .rotatingText-description {
+        font-size: 40px;
+      }
+    }
+    .rotatingText-adjective {
+      font-family: "Roboto", sans-serif;
+      font-size: 40px;
+      left: 0;
+      margin-bottom: 0;
+      margin-top: 50px;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      top: 0;
+    }
+    @media (min-width: 768px) {
+      .rotatingText-adjective {
+        font-size: 70px;
+      }
+    }
+    .rotatingText-adjective:nth-of-type(1) {
+      animation: rotate-text-up 1.5s 0.75s;
+    }
+    .rotatingText-adjective:nth-of-type(2) {
+      animation: rotate-text-up 1.5s 2s;
+    }
+    .rotatingText-adjective:nth-of-type(3) {
+      animation: rotate-text-up 1.5s 3.25s;
+    }
+    @keyframes rotate-text-up {
+      0% {
+        transform: translate3d(0, 80px, 0);
+        opacity: 0;
+      }
+      20%,
+      80% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(0, -40px, 0);
+        opacity: 0;
+      }
+    }
+    @keyframes fade-text-in {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 80px, 0);
+      }
+      50%,
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    button {
+      display: flex;
+      align-items: center;
+      font-family: inherit;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 1em 1.6em 1em 1.3em;
+      color: white;
+      background: #9175f9;
+      border: none;
+      letter-spacing: 0.1em;
+      border-radius: 16px;
+      margin-left: 22rem;
+      margin-top: 20px;
+    }
 
-  }
-.rotatingText {
-	 display: flex;
-	 height: 20vh;
-	 text-align: center;
-}
- .rotatingText-content {
-	 position: relative;
-	 width: 100%;
-}
- .rotatingText-description {
-	 font-family: 'Roboto', serif;
-	 font-style: bold;
-	 font-size: 36px;
-	 margin: 0;
-}
- @media (min-width: 768px) {
-	 .rotatingText-description {
-		 font-size: 40px;
-	}
-}
- .rotatingText-adjective {
-	 font-family: 'Roboto', sans-serif;
-	 font-size: 40px;
-	 left: 0;
-	 margin-bottom: 0;
-	 margin-top: 50px;
-	 opacity: 0;
-	 position: absolute;
-	 right: 0;
-	 text-align: center;
-	 text-transform: uppercase;
-	 top: 0;
-   
-}
- @media (min-width: 768px) {
-	 .rotatingText-adjective {
-		 font-size: 70px;
-	}
-}
- .rotatingText-adjective:nth-of-type(1) {
-	 animation: rotate-text-up 1.5s 0.75s;
-}
- .rotatingText-adjective:nth-of-type(2) {
-	 animation: rotate-text-up 1.5s 2s;
-}
- .rotatingText-adjective:nth-of-type(3) {
-	 animation: rotate-text-up 1.5s 3.25s;
-}
- @keyframes rotate-text-up {
-	 0% {
-		 transform: translate3d(0, 80px, 0);
-		 opacity: 0;
-	}
-	 20%, 80% {
-		 transform: translate3d(0, 0, 0);
-		 opacity: 1;
-	}
-	 100% {
-		 transform: translate3d(0, -40px, 0);
-		 opacity: 0;
-	}
-}
- @keyframes fade-text-in {
-	 0% {
-		 opacity: 0;
-		 transform: translate3d(0, 80px, 0);
-	}
-	 50%, 100% {
-		 opacity: 1;
-		 transform: translate3d(0, 0, 0);
-	}
-}
-  button {
-    display: flex;
-    align-items: center;
-    font-family: inherit;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 1em 1.6em 1em 1.3em;
-    color: white;
-    background: #9175f9;
-    border: none;
-    letter-spacing: 0.1em;
-    border-radius: 16px;
-    margin-left: 22rem;
-    margin-top: 20px;
-  }
+    button svg {
+      margin-right: 3px;
+      transform: rotate(30deg);
+      transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
 
-  button svg {
-    margin-right: 3px;
-    transform: rotate(30deg);
-    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-  }
+    button span {
+      transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
 
-  button span {
-    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-  }
+    button:hover svg {
+      transform: translateX(5px) rotate(90deg);
+    }
 
-  button:hover svg {
-    transform: translateX(5px) rotate(90deg);
-  }
-
-  button:hover span {
-    transform: translateX(7px);
-  }
-  button:hover {
-    background-color: #04db89;
-    color: #fff;
-  }
+    button:hover span {
+      transform: translateX(7px);
+    }
+    button:hover {
+      background-color: #04db89;
+      color: #fff;
+    }
   }
   @media (min-width: 320px) and (max-width: 480px) {
-   .landing {
-   display: none;
+    .landing {
+      display: none;
+    }
+    .landing-movil {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     align-items: center;
+    }
+    .text-landing {
+      font-family: "Shadows Into Light", cursive;
+     letter-spacing: 2;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 700;
+      width: 80%;
+      text-align: center;
+      display: flex-end;
+    justify-content: center;
+   align-items: center;
+  height: 30vh;
+    }
+   span {
+    color: #dbd56e;
+	 background: -webkit-linear-gradient(25deg, #eee, #333);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 font-weight: 500;
+	 overflow: hidden;
+	 white-space: nowrap;
+	 border-right: 2px solid;
+	 animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+	 position: relative;
    }
-   .landing-movil {
- display: flex;
-flex-direction: column;
-justify-content: center;
-   }
-   .text-landing {
-   font-family: 'roboto';
+   @keyframes type {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 100%;
+	}
+}
+ @keyframes cursor {
+	 50% {
+		 border-color: transparent;
+	}
+}
 
-   color: #fff;
-  font-size: 25px;
- font-weight: 400;
-width: 80%;
-text-align: center;
-   }
-   }
-  
+  }
 </style>
