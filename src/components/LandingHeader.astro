@@ -63,9 +63,9 @@
 
   <div class="text-landing">
     <div>
-      <span class="type">Formando mini programadores</span><br />
-      <span class="type">Aprende a crear paginas web</span><br />
-      <span class="type">Diseña juegos y aplicaciones</span>
+      <h1 class="type">Formando mini programadores</h1><br />
+      <h1 class="type">Aprende a crear paginas web</h1><br />
+      <h1 class="type">Diseña juegos y aplicaciones</h1>
     </div>
   </div>
 </div>
@@ -248,30 +248,27 @@
       align-items: center;
     }
     .text-landing {
-      font-family: "Roboto";
-      letter-spacing: 2;
-      color: #fff;
-      font-size: 20px;
-      font-weight: 700;
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 30vh;
     }
-    span {
-      color: #dbd56e;
-      background: -webkit-linear-gradient(25deg, #eee, #333);
+    /* Custom */
+    h1 {
+      color: #ffffff;
+      background: -webkit-linear-gradient(25deg, #ffffff, #771fd4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      font-size: 1.5rem;
       font-weight: 500;
       overflow: hidden;
       white-space: nowrap;
       border-right: 2px solid;
       animation:
-        type 1.5s steps(90) 1.5s 1 normal both,
+        type 2.5s steps(90) 2.5s 1 normal both,
         cursor 1s step-end infinite;
       position: relative;
+      padding-left: 3rem;
     }
     @keyframes type {
       from {
