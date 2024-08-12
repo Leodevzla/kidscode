@@ -2,9 +2,9 @@
 <header>
   <img src="logo.png" href="#Home" alt="Logo KIDSCODE" />
   <ul class="menu-bar">
-    <li><a href="#Beneficios">BENEFICIOS</a></li>
-    <li><a href="#Cursos">CURSOS</a></li>
-    <li><a href="#Equipo">EQUIPO</a></li>
+    <li><a href="#beneficios">BENEFICIOS</a></li>
+    <li><a href="#cursos">CURSOS</a></li>
+    <li><a href="#equipo">EQUIPO</a></li>
     <li id="btn" class="boton-contacto">
       <i class="fa-solid fa-phone"></i>CONTACTO
     </li>
@@ -126,15 +126,15 @@
   <label for="active" class="close"></label>
   <div class="wrapper">
     <ul>
-      <li><a href="#beneficios">Beneficios</a></li>
-      <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#equipo">Equipo</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">Ingresar</a></li>
+      <li><a href="#beneficios" onclick="closeMenu()">Beneficios</a></li>
+      <li><a href="#cursos" onclick="closeMenu()">Cursos</a></li>
+      <li><a href="#equipo" onclick="closeMenu()">Equipo</a></li>
+      <li><a href="#" onclick="closeMenu()">Contacto</a></li>
+      <li><a href="#" onclick="closeMenu()">Ingresar</a></li>
     </ul>
   </div>
   <!-- fin para movil -->
-  <script>
+  <script is:inline>
     window.addEventListener("scroll", function () {
       var header = document.querySelector("header");
       header.classList.toggle("scroll", window.scrollY > 20);
@@ -191,11 +191,14 @@
         modalc.style.display = "none";
       }
     };
+    function closeMenu() {
+      document.getElementById('active').checked = false;
+    }
   </script>
   <style>
     @media (min-width: 1200px) {
       img {
-        margin-top: 6rem;
+        margin-top: 2rem;
         width: 16rem;
       }
       header {
@@ -206,15 +209,10 @@
         width: 100%;
         position: fixed;
         padding-top: 36px;
-        margin: 0 -2rem;
+        margin: 0 1rem;
       }
       .scroll {
         display: none;
-      }
-      .img {
-        width: 160px;
-        margin-top: 20px;
-        margin-left: 64px;
       }
       .wrapper {
         display: none;
@@ -544,7 +542,7 @@
         color: rgb(0, 0, 0);
       }
       .menu-bar li:hover::before {
-        background: linear-gradient(to bottom, #ffe605, #ffe605);
+        background: linear-gradient(to bottom, #9175f9, #9175f9);
         box-shadow: 0px 3px 20px 0px black;
         transform: scale(0.9);
       }
@@ -582,7 +580,7 @@
         /* background: linear-gradient(375deg, #9175f9, #f2f75d);*/ 
          background: linear-gradient(-45deg, #9175f9 0%, #9802fc 100%);
         transition: all 0.6s ease-in-out;
-        z-index: 3;
+        z-index: 1;
       }
       #active:checked ~ .wrapper {
         /*left: 0;*/
@@ -590,7 +588,7 @@
       }
       .menu-btn {
         position: absolute;
-        z-index: 4;
+        z-index: 2;
         right: 20px;
         /*left: 20px; */
         top: 20px;
@@ -623,7 +621,7 @@
       }
 
       .close {
-        z-index: 1;
+        z-index: 10;
         width: 100%;
         height: 100%;
         pointer-events: none;
