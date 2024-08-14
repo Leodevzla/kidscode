@@ -27,6 +27,7 @@
           >
         </section>
         <footer class="modal-container-footer">
+          <button class="button price">49.<span>99</span></button>
           <button class="button is-ghost">Info</button>
           <button class="button is-primary">Inscribete</button>
         </footer>
@@ -56,6 +57,7 @@
       </section>
       
       <footer class="modal-container-footer">
+        <button class="button price">$49.<span>99</span></button>
         <button class="button is-ghost">Info</button>
         <button class="button is-primary">Inscribete</button>
       </footer>
@@ -87,6 +89,7 @@
       >
     </section>
     <footer class="modal-container-footer">
+      <button class="button price">49.<span>99</span></button>
       <button class="button is-ghost">Info</button>
       <button class="button is-primary">Inscribete</button>
     </footer>
@@ -272,6 +275,10 @@
       cursor: pointer;
       transition: 0.15s ease;
     }
+    .button span {
+      font-size: 12px;
+      font-weight: 500;
+    }
 
     .button.is-ghost:hover,
     .button.is-ghost:focus {
@@ -287,6 +294,18 @@
     .button.is-primary:focus {
       background-color: #04db89;
     }
+    
+    .button.price{
+      background-color: #04db89;
+      color: #fff;
+    }
+    
+    .button.price:hover {
+      background-color: #b200ff;
+      color: #fff;
+    }
+
+
 
     .icon-button {
       padding: 0;
