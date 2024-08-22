@@ -111,7 +111,6 @@
   </div>
 </section>
 <style>
-  @media (min-width: 1200px) {
     .container-equipo {
       background-image: linear-gradient(rgba(145, 117, 249, 0.5),
           rgba(145, 117, 249, 0.5)),
@@ -251,7 +250,19 @@
       color: #009cda;
       background-color: #f7f5ec;
     }
-  }
+    @media (min-width: 768px) and (max-width: 1199px) {
+     .container-equipo {
+      height: auto;
+     }
+      .row {
+     display: flex;
+     flex-direction: row;
+     }
+     .our-team {
+      width: 200px;
+      height: 300px;
+     }
+    }
   @media (min-width: 320px) and (max-width: 480px) {
     .container-equipo {
       background-color: #9175f9;
