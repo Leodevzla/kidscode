@@ -44,10 +44,10 @@
       ></path>
     </defs>
     <g class="parallax">
-      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(145,117,249,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(145,117,249,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(145,117,249,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#9175f9" />
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="#d86aff" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="#d86aff" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="#d86aff" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#d86aff" />
     </g>
   </svg>
 </div>
@@ -57,7 +57,8 @@
       src="prin.png"
       class="img-principal"
       alt="imagen principal"
-      width="800px"
+      width="300px"
+      
     />
   </div>
 
@@ -80,7 +81,7 @@
       display: none;
     }
     img {
-      max-width: 600px;
+      max-width: 95vh;
 
     }
     .direccion {
@@ -90,14 +91,14 @@
       align-items: center;
     }
     .side1 {
-      max-width: 50%;
+      width: 50%;
       align-items: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
     .side2 {
-      max-width: 50%;
+    width: 50%;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -112,11 +113,11 @@
       font-size: 4rem;
       font-weight: 400;
       overflow: hidden;
-      background-color: #000000;
+      background-color: #fff;
       display: flex;
       flex-direction: row;
       max-width: 100%;
-      padding-top: 3.5rem;
+      padding: 8rem 0;
       justify-content: center;
       align-items: center;
     }
@@ -128,11 +129,11 @@
     }
     /* Custom */
     h1 {
-      color: #ffffff;
-      background: -webkit-linear-gradient(25deg, #ffffff, #ffffff);
+      color: #000;
+      background: -webkit-linear-gradient(25deg, #000000, #000000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 2.4rem;
+      font-size: 2.5vw;
       font-weight: 500;
       overflow: hidden;
       white-space: nowrap;
@@ -216,7 +217,7 @@
       font-size: 20px;
       padding: 1em 1.6em 1em 1.3em;
       color: white;
-      background: #9175f9;
+      background: #ab3ed8;
       border: none;
       letter-spacing: 0.1em;
       border-radius: 16px;
@@ -241,7 +242,7 @@
       transform: translateX(7px);
     }
     button:hover {
-      background-color: #04db89;
+      background-color: #ffe605;
       color: #000000;
     }
   @media only screen and (min-width: 900px) and (max-width: 1199px) {
@@ -335,6 +336,9 @@
     }
     .landing {
       display: none;
+    }
+    .img-principal {
+      margin-top: 7rem;
     }
     .landing-movil {
       display: flex;

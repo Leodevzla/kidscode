@@ -1,4 +1,4 @@
-<div class="cursos" id="cursos">
+<div class="cursos" id="Cursos">
   <h1 id="title">Cursos disponibles</h1>
   <div class="direccion">
     <div class="modal">
@@ -101,10 +101,10 @@
 <style>
     .cursos {
       display: flex;
-      background-color: #9175f9;
+      background-image: linear-gradient(to bottom, #ab3ed8, #a032ce, #9526c5, #8a17bb, #7f00b2);
       justify-content: center;
       flex-direction: column;
-      height: 7auto;
+      height: auto;
       margin-bottom: 0 !important;
     }
     .button,
@@ -113,14 +113,10 @@
     .textarea {
       font: inherit;
     }
-    h1 {
-      background-color: #04db89;
-    }
     .direccion {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      background-color: #04db89;
       padding-bottom: 5rem;
       margin-bottom: 0;
     }
@@ -151,7 +147,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.7);
     }
 
     @media (max-width: 600px) {
@@ -366,6 +362,9 @@
       display: flex;
       margin: 0;
       background-color: #eaeaeb;
+      flex-direction: column;
+    }
+    .direccion {
       flex-direction: column;
     }
     .button,
