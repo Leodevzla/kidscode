@@ -247,7 +247,7 @@
     }
   @media only screen and (min-width: 900px) and (max-width: 1199px) {
     img {
-
+      max-width: 60vh;
     }
     .direccion {
       display: flex;
@@ -259,7 +259,7 @@
       padding-top: 6.5rem;
     }
     .text-landing {
-      margin-left: 12rem;
+      margin-left: 6rem;
     }
     /* Custom */
     h1 {
@@ -270,6 +270,9 @@
     button {
       font-size: 15px;
       padding: 1em 1.6em 1em 1.3em;
+    }
+    .side2 {
+      margin-right: 1rem;
     }
   }
   @media (min-width: 481px) and (max-width: 899px) {
@@ -283,22 +286,27 @@
     .landing {
       display: none;
     }
+    .img-principal {
+      margin-top: 3rem;
+    }
     .landing-movil {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      padding-top: 3rem
     }
     .text-landing {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 30vh;
+      color: #000;
     }
     /* Custom */
     h1 {
-      color: #ffffff;
-      background: -webkit-linear-gradient(25deg, #ffffff, #ffffff);
+      color: #060000;
+      background: -webkit-linear-gradient(25deg, #0b0000, #010000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 1.5rem;
@@ -354,11 +362,11 @@
     }
     /* Custom */
     h1 {
-      color: #ffffff;
-      background: -webkit-linear-gradient(25deg, #ffffff, #ffffff);
+      color: #000;
+      background: -webkit-linear-gradient(25deg, #000, #000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 500;
       overflow: hidden;
       white-space: nowrap;
@@ -367,7 +375,8 @@
         type 2.5s steps(90) 2.5s 1 normal both,
         cursor 1s step-end infinite;
       position: relative;
-      padding-left: 3rem;
+      padding-left: 2rem;
+      padding-bottom: 0;
     }
     @keyframes type {
       from {
